@@ -72,9 +72,9 @@
 
 @media only screen and (max-width: 600px) {
   .search-bar {
-    border: 3px solid rgb(16, 47, 17);
-    border-radius: 10px;
-    padding: 1% 0.5%;
+    border: 2px solid rgb(16, 47, 17);
+    border-radius: 7px;
+    padding: 0.7% 0.5%;
     background-color: rgb(213, 242, 224);
     display: flex;
     /* width: 30%; */
@@ -95,5 +95,24 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 30%;
+  }
+
+  .imgshow {
+    columns: 3 100px;
+    column-gap: 10px;
+    margin: 70px auto;
+    /* background-color: aquamarine; */
+    /* display: flex; */
+  }
+  .img {
+    /* drop-shadow: 1px 1px 1px black; */
+    /* box-shadow: ; */
+    box-shadow: 1px 1px 1px 1px gray;
+    border: 3px solid rgb(9, 26, 14);
+    /* border-radius: 10%; */
+
+    width: 90%;
+    padding: 7px;
+    margin: 2px;
   }
 }
