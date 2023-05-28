@@ -1,21 +1,8 @@
-import { useState } from "react";
-// import { useState } from "react";
 import "./style.css";
 
-function Searchbar({ onsubmit }) {
-  const [term, setterm] = useState("");
-
-  const handlesubmit = (event) => {
-    event.preventDefault();
-    // console.log(term);
-    onsubmit(term);
-  };
-  const handlechange = (event) => {
-    setterm(event.target.value);
-  };
+function Searchbar({ input, setInput }) {
   return (
     <div className="search-bar">
-      <form onSubmit={handlesubmit}>
         <div className="input">
           <div className="icon">
             <svg
@@ -34,8 +21,10 @@ function Searchbar({ onsubmit }) {
               {/* <PhotoIcon class="h-6 w-6 text-gray-500" /> */}
             </svg>
           </div>
-          <input onChange={handlechange} type="text" value={term} />
-          <div className="icon search" onClick={handlesubmit}>
+          <input onChange={(event) => {
+              setInput(event.target.value);
+          }} type="text" value={input} />
+          <div className="icon search">
             <svg
               fill="none"
               stroke="currentColor"
@@ -52,7 +41,6 @@ function Searchbar({ onsubmit }) {
             </svg>
           </div>
         </div>
-      </form>
       {/* <button onClick={handleclick}>Click me</button> */}
     </div>
   );
