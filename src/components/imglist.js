@@ -3,7 +3,7 @@ import Imageshow from "./imgshow";
 import Searchimg from "../api";
 import "./style.css";
 
-function imglist({ input }) {
+function ImgList({ input }) {
   const query = useDeferredValue(input);
   const [images, setImages] = useState([]);
   const [isPending, startTransition] = useTransition();
@@ -25,4 +25,4 @@ function imglist({ input }) {
   }</div>;
 }
 
-export default imglist;
+export default ImgList;
